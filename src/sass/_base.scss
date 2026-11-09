@@ -1,0 +1,146 @@
+$green-400: hsl(172, 67%, 45%);
+
+$green-900: hsl(183, 100%, 15%);
+$grey-500: hsl(186, 14%, 43%);
+$grey-400: hsl(184, 14%, 56%);
+$grey-200: hsl(185, 41%, 84%);
+$grey-50: hsl(189, 47%, 97%);
+$white: hsl(0, 100%, 100%);
+
+$placeholder: hsl(184, 19%, 68%);
+$hover: hsl(173, 59%, 78%);
+$error: hsl(13, 31%, 57%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media (max-width: 64em) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 56em) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 48em) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  background-color: $grey-200;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+
+  @media (max-width: 48em) {
+    height: 100%;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+  }
+}
+
+button,
+input {
+  all: unset;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input {
+  color: $green-900;
+  caret-color: $green-400;
+
+  &::placeholder {
+    color: $placeholder;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  margin-bottom: 8.4rem;
+
+  @media (max-width: 48em) {
+    margin-bottom: 4rem;
+  }
+}
+
+.component {
+  background-color: $white;
+  width: 86rem;
+  padding: 3.2rem;
+  border-radius: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2.8rem 2.8rem 0 0;
+  }
+}
+
+.btn {
+  background-color: $green-900;
+  color: $white;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.1s;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  color: $green-900 !important;
+  background-color: $green-400 !important;
+}
+
+.error {
+  outline: 0.2rem solid $error !important;
+}

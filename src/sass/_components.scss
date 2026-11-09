@@ -1,0 +1,108 @@
+@use "base";
+
+.bill-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-box {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media (max-width: 48em) {
+    padding: 3.2rem;
+    gap: 3.2rem;
+  }
+}
+
+.subheading {
+  font-size: 1.6rem;
+  color: base.$grey-500;
+  margin-bottom: 0.6rem;
+}
+
+.card-input {
+  background-color: base.$grey-50;
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.6rem;
+
+  img {
+    flex-shrink: 0;
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+  }
+
+  &:focus-within {
+    outline: 0.2rem solid base.$green-400;
+  }
+
+  @media (max-width: 48em) {
+    // padding: 0.6rem;
+  }
+}
+
+.tip-card--grid {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem 1.4rem;
+
+  @media (max-width: 48em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.btn--tip {
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+
+  &:hover,
+  &:active {
+    background-color: base.$hover;
+    color: base.$green-900;
+  }
+
+  &:focus {
+    outline: 0.2rem solid base.$green-400;
+  }
+}
+
+.btn--tip-custom {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: right;
+  border-radius: 0.6rem;
+  background-color: base.$grey-50;
+
+  &::placeholder {
+    text-align: center;
+    color: base.$grey-500;
+  }
+
+  &:focus-within {
+    outline: 0.2rem solid base.$green-400;
+  }
+
+  &:not(:placeholder-shown) {
+    padding-right: 1.6rem;
+  }
+}
+
+.people-card-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error-text {
+  color: base.$error;
+}

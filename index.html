@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" defer src="src/js/index.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <img src="src/images/logo.svg" alt="Splitter" class="logo" />
+      <div class="component">
+        <div class="inputs-box">
+          <div class="bill-card">
+            <label for="bill" class="subheading">Bill</label>
+            <div class="card-input">
+              <img src="src/images/icon-dollar.svg" alt="dollar sign icon" />
+              <input
+                type="number"
+                name="bill"
+                id="bill"
+                class="numInput"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div class="tip-card" role="group" aria-labelledby="tip-label">
+            <p id="tip-label" class="subheading">Select Tip %</p>
+            <div class="tip-card--grid">
+              <button type="button" class="btn btn--tip" data-tip="5">
+                5%
+              </button>
+              <button type="button" class="btn btn--tip" data-tip="10">
+                10%
+              </button>
+              <button type="button" class="btn btn--tip" data-tip="15">
+                15%
+              </button>
+              <button type="button" class="btn btn--tip" data-tip="25">
+                25%
+              </button>
+              <button type="button" class="btn btn--tip" data-tip="50">
+                50%
+              </button>
+              <input
+                type="number"
+                class="btn--tip-custom"
+                id="btn--tip-custom"
+                placeholder="Custom"
+                aria-label="Custom tip percentage"
+              />
+            </div>
+          </div>
+
+          <div class="people-card">
+            <div class="people-card-text-box">
+              <label for="peopleNum" class="subheading">Number of People</label>
+              <p
+                id="peopleNum-error"
+                class="subheading error-text hidden"
+                role="alert"
+              >
+                Can't be zero
+              </p>
+            </div>
+            <div class="people-card-input card-input">
+              <img src="src/images/icon-person.svg" alt="person icon" />
+              <input
+                type="number"
+                name="peopleNum"
+                id="peopleNum"
+                class="numInput"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="results-box">
+          <div class="results">
+            <div class="result">
+              <div class="result-text">
+                <p>Tip Amount</p>
+                <span>/ person</span>
+              </div>
+              <div class="result-output">
+                <output id="tip-amount">$0.00</output>
+              </div>
+            </div>
+
+            <div class="result">
+              <div class="result-text">
+                <p>Total</p>
+                <span>/ person</span>
+              </div>
+              <div class="result-output">
+                <output id="tip-total">$0.00</output>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn--reset">Reset</button>
+        </div>
+      </div>
+      <!-- <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </footer> -->
+    </main>
+  </body>
+</html>
