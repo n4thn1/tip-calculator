@@ -20,7 +20,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [https://github.com/n4thn1/tip-calculator](https://github.com/n4thn1/tip-calculator)
-- Live Site URL: [https://n4thn1.github.io/tip-calculator/](https://n4thn1.github.io/tip-calculator/)
+- Live Site URL: [https://tip-calculator-iota-nine.vercel.app](https://tip-calculator-iota-nine.vercel.app)
 
 ## My process
 
